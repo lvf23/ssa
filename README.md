@@ -22,7 +22,7 @@ To install SSA, you can run the install command. The `install` command supports 
 2. **Repository reference (ref)** — This specifies which version of the repository to install. It can be:
    - A tag, e.g. `refs/tags/v1.0.0`
    - A branch, e.g. `refs/heads/main`
-   - - A specific commit hash (must be the **full** commit hash), e.g. `a1b2c3d4e5f6g7h8i9j0k123456789abcdef`
+   - - A specific commit hash (must be the **full** commit hash), e.g. `a1b2c3d4e5f67890abcde1234567890abcdef123`
 
 Example usage:
 

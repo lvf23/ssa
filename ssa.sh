@@ -5,6 +5,8 @@ add_bashrc_block(){
     TIME=$1
     BASHRC=~/.bashrc
 
+    create_bashrc_if_not_exists
+
     if grep -q '#BEGIN SSA' "$BASHRC"; then
         echo "SSA block already exists in $BASHRC."
         return 1    
@@ -37,6 +39,13 @@ add_ssh_key (){
         ssh-add -t "$TIME"
     else
         ssh-add -t "$TIME" "$KEY"
+    fi
+}
+
+create_bashrc_if_not_exists() {
+    if [ ! -f ~/.bashrc ]; then
+        echo "Creating ~/.bashrc file..."
+        touch ~/.bashrc
     fi
 }
 
